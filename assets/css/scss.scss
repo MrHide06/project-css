@@ -1,0 +1,61 @@
+$background-image: url(../image/bg-i.jpg);
+$background-color:blue;
+
+body {
+    background: $background-image;
+    // background-color: $background-color;
+}
+
+ul.topnav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: visible;
+
+    li{
+        float: left;
+        .icon{
+            display: none;
+        }
+    }
+    a{
+        display:inline-block;
+        color:#f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+    a:hover{
+        background-color:visible;
+    }
+
+}
+
+.homepage{
+    padding-top: 15%;   
+}
+
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+@media screen and (max-width:680px){
+    ul.topnav{
+        li:not(:first-child) {
+            display: none;
+        }
+
+        li{
+            .icon{
+                float: right;
+                display: inline-block;
+            }
+        }
+    }
+}

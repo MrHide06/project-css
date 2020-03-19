@@ -1,0 +1,56 @@
+body {
+  background: url(../image/bg-i.jpg);
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: visible;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li .icon {
+  display: none;
+}
+
+ul.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav a:hover {
+  background-color: visible;
+}
+
+.homepage {
+  padding-top: 15%;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 680px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li .icon {
+    float: right;
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=scss.css.map */
