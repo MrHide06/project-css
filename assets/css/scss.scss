@@ -1,8 +1,11 @@
-$background-image: url(../image/bg-i.jpg);
+$img: url(../image/bg-i.jpg);
 $background-color:blue;
+$fc: black;
+$fz: 12px;
+$fw: 200;
 
 body {
-    background: $background-image;
+    background: $img;
     // background-color: $background-color;
 }
 
@@ -15,18 +18,22 @@ ul.topnav{
 
     li{
         float: left;
-        .icon{
-            display: none;
-        }
     }
+    li.image{
+        float:none !important;
+    }
+    li.icon{
+        display: none;
+    }
+
     a{
         display:inline-block;
-        color:#f2f2f2;
+        color:$fc;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
         transition: 0.3s;
-        font-size: 17px;
+        font-size: 12px;
     }
     a:hover{
         background-color:visible;
@@ -35,7 +42,17 @@ ul.topnav{
 }
 
 .homepage{
-    padding-top: 15%;   
+    padding-top: 15%;
+    text-align: center;
+    h2{
+        color: $fc;
+        font-size: $fz;
+        line-height: 22px;
+        letter-spacing: 1px;
+        font-weight: $fw;
+        margin: 0;
+        padding: 0;
+    }   
 }
 
 .container{
@@ -51,11 +68,43 @@ ul.topnav{
             display: none;
         }
 
-        li{
-            .icon{
-                float: right;
-                display: inline-block;
-            }
+        li.icon{
+            float: right;
+            display: inline-block;
         }
     }
 }
+
+@media screen and (max-width:680px){
+    ul.topnav.responsive{
+        position: relative;
+
+        li.icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        li{
+            float: none;
+            display: inline;
+
+            a{
+                display: block;
+                text-align: left;
+            }
+        }
+
+    }
+    
+}
+
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-12{
+
+}
+
